@@ -9,7 +9,7 @@ function buy (){
     let ticketSuperior = document.getElementById('qtd-superior');
     let ticketInferior = document.getElementById('qtd-inferior');
 
-    if (ticket == 'pista'){
+    if (ticket == 'pista' && quantity >= 0){
       
         if (quantity > pista){
             alert ('Valor inválido');
@@ -18,7 +18,7 @@ function buy (){
 
             ticketPista.textContent = `${pista}`;
         }     
-   } else if (ticket == 'superior') {
+   } else if (ticket == 'superior' && quantity >= 0) {
 
         if (quantity > superior){
             alert ('Valor inválido');
@@ -27,7 +27,7 @@ function buy (){
     
             ticketSuperior.textContent = `${superior}`;
         }
-   } else if (ticket == 'inferior') { 
+   } else if (ticket == 'inferior' && quantity >= 0) { 
 
         if (quantity > inferior){
             alert ('Valor inválido');
